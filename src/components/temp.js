@@ -17,7 +17,7 @@ const Temp = () => {
         const data = await res.json();
 
         const {temp, humidity, pressure} = data.main;
-        const {main: weathermood} = data.weather[0]; //changing name to weathermood
+        const {main: weathermood} = data.weather[0];
         const {name} = data;
         const {speed} = data.wind;
         const {country, sunset} = data.sys;
