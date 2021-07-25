@@ -7,10 +7,11 @@ const Temp = () => {
 
     const [searchValue, setSearchValue] = useState("Ghaziabad");
     const [tempInfo, setTempInfo] = useState({});
+    const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
     const getWeatherInfo = async () => {
         try {
-        var url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=b61ddb08a82efb06e3f30774f91719fd`;
+        var url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=${API_KEY}`;
 
         const res = await fetch(url);
         const data = await res.json();
