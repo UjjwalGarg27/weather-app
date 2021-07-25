@@ -34,7 +34,7 @@ const WeatherCard = ({
     //converting the seconds into time
     var sec = sunset;
     var date = new Date(sec*1000);
-    var timeStr = `${date.getHours()} : ${date.getMinutes() }`
+    var timeStr = `${date.getHours()}:${date.getMinutes()}`
 
     return (
         <>
@@ -63,7 +63,7 @@ const WeatherCard = ({
                         <span> 
                             <i className={"wi wi-sunset"}></i> 
                         </span>
-                        <p className="extra-info-leftside"> {timeStr} PM<br /> Sunset
+                        <p className="extra-info-leftside">{timeStr}PM<br /> Sunset
                         </p>
                     </div>
 
